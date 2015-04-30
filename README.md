@@ -8,6 +8,7 @@
 * 在Demo中找到`LCNewFeature`文件夹，拖拽到你的项目中。
 * 在`AppDelegate.m`文件中，导入头文件：`#import "LCNewFeature.h"`，参考一下代码进行快速集成：
     
+    ```
     BOOL showNewFeature = [LCNewFeatureVC shouldShowNewFeature];
     
     if (showNewFeature) {   // 如果需要显示新特性界面
@@ -27,15 +28,18 @@
         
         [self enterMainVC];
     }
+    ```
     
 * `enterMainVC`(进入主界面)方法参考：
     
+    ```
     - (void)enterMainVC {
         
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         
         self.window.rootViewController = storyboard.instantiateInitialViewController;
     }
+    ```
 
 * 有一些神奇的地方，比如赋值只需要传一次图片名是为什么？其实是这样的，你需要按以下规范来给图片命名：（这其实是美工的事:)）
     比如图片原名：`NewFeature@2x.png`
