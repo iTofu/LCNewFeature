@@ -1,6 +1,8 @@
 ## LCNewFeature
 几行代码快速集成新特性界面!
 
+![image](https://github.com/LeoiOS/LCNewFeature/blob/master/ScreenShot.png)
+
 ## 前言
 每次拿到一个项目的时候，头疼的几件事之一就是新特性界面，写一堆代码做一个简单的东西。所以抽空写了个快速集成新特性界面的框架，传了上来。
 
