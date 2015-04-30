@@ -64,12 +64,14 @@
 
 ## Tips
 * 提供了两种进入主界面的方式：
+    
     ```
     + (instancetype)newFeatureWithImageName:(NSString *)imageName imageCount:(NSInteger)imageCount showPageControl:(BOOL)showPageControl finishBlock:(finishBlock)finishBlock;
         将通过一直左划的方式，通过block回调进入主界面。
     + (instancetype)newFeatureWithImageName:(NSString *)imageName imageCount:(NSInteger)imageCount showPageControl:(BOOL)showPageControl enterButton:(UIButton *)enterButton;
         将在最后一张新特性图片上添加一个按钮，然后点击按钮进入主界面，按钮的属性设置好再传入（参考Demo中的代码）。
     ```
+
 * 上述方法都是类方法，也提供了实例方法`initWith`什么的，视个人习惯调用。
 
 * 提供了一些属性，可选设置：
@@ -78,7 +80,8 @@
     - 其他点(分页控制器)的颜色：`pointOtherColor`
     - 状态栏样式：`statusBarStyle`
 
-* 经理可以顶，但是美工的妹子和服务器的哥们绝对不能惹！2333
+* 记住一句话：经理可以顶，职位可以辞，但是服务器的哥们和美工的妹子绝对不能惹！2333
+
 * 多参考Demo，如果还有问题或者建议，请联系我，我也想做的更好！联系方式在下面:)
 
 ## 联系
