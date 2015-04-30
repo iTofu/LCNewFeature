@@ -6,7 +6,7 @@
 
 ## 代码
 * 在Demo中找到`LCNewFeature`文件夹，拖拽到你的项目中。
-* 在`AppDelegate.m`文件中，导入头文件：`#import "LCNewFeature.h"`，参考一下代码进行快速集成：
+* 在`AppDelegate.m`文件中，导入头文件：`#import "LCNewFeature.h"`，参考下列代码快速集成：
     
     ```
     BOOL showNewFeature = [LCNewFeatureVC shouldShowNewFeature];
@@ -64,15 +64,20 @@
 
 ## Tips
 * 提供了两种进入主界面的方式：
-    - `+ (instancetype)newFeatureWithImageName:(NSString *)imageName imageCount:(NSInteger)imageCount showPageControl:(BOOL)showPageControl finishBlock:(finishBlock)finishBlock;`
+    ```
+    + (instancetype)newFeatureWithImageName:(NSString *)imageName imageCount:(NSInteger)imageCount showPageControl:(BOOL)showPageControl finishBlock:(finishBlock)finishBlock;
         将通过一直左划的方式，通过block回调进入主界面。
-    - `+ (instancetype)newFeatureWithImageName:(NSString *)imageName imageCount:(NSInteger)imageCount showPageControl:(BOOL)showPageControl enterButton:(UIButton *)enterButton;`
+    + (instancetype)newFeatureWithImageName:(NSString *)imageName imageCount:(NSInteger)imageCount showPageControl:(BOOL)showPageControl enterButton:(UIButton *)enterButton;
         将在最后一张新特性图片上添加一个按钮，然后点击按钮进入主界面，按钮的属性设置好再传入（参考Demo中的代码）。
+    ```
 
 * 提供了一些属性，可选设置：
-    - 当前点(分页控制器)的颜色：`pointCurrentColor`。
-    - 其他点(分页控制器)的颜色：`pointOtherColor`。
-    - 状态栏样式：`statusBarStyle`。
+
+    - 当前点(分页控制器)的颜色：`pointCurrentColor`
+    - 其他点(分页控制器)的颜色：`pointOtherColor`
+    - 状态栏样式：`statusBarStyle`
+
+* 多参考Demo，如果还有问题或者建议，请联系我，我也想做的更好！联系方式在下面:)
 
 ## 联系
 * 发现问题请lssues我，谢谢:)
