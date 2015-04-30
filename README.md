@@ -42,14 +42,17 @@
     ```
 
 * 有一些神奇的地方，比如赋值只需要传一次图片名是为什么？其实是这样的，你需要按以下规范来给图片命名：（这其实是美工的事:)）
+    ```
     比如图片原名：`NewFeature@2x.png`
     
     规范：
     `NewFeature_1@2x.png`   将作为第一张图展示
     `NewFeature_2@2x.png`   将作为第二张图展示
     ...
+    ```
 
 * 那么怎么适配不同尺寸的屏幕呢？简单，不用动代码，还是规范图片命名：（这还是美工的事:)）
+    ```
     比如图片原名：`NewFeature_1@2x.png` 
     
     规范：
@@ -57,11 +60,14 @@
     `NewFeature_1_iphone5@2x.png`   将展示在iPhone5/5S上
     `NewFeature_1_iphone6@2x.png`   将展示在iPhone6上
     `NewFeature_1_iphone6p@2x.png`  将展示在iPhone6Plus上
+    ```
 
 ## Tips
 * 提供了两种进入主界面的方式：
-    - `+ (instancetype)newFeatureWithImageName:(NSString *)imageName imageCount:(NSInteger)imageCount showPageControl:(BOOL)showPageControl finishBlock:(finishBlock)finishBlock;`，将通过一直左划的方式，通过block回调进入主界面。
-    - `+ (instancetype)newFeatureWithImageName:(NSString *)imageName imageCount:(NSInteger)imageCount showPageControl:(BOOL)showPageControl enterButton:(UIButton *)enterButton;`，将在最后一张新特性图片上添加一个按钮，然后点击按钮进入主界面，按钮的属性设置好再传入（参考Demo中的代码）。
+    - `+ (instancetype)newFeatureWithImageName:(NSString *)imageName imageCount:(NSInteger)imageCount showPageControl:(BOOL)showPageControl finishBlock:(finishBlock)finishBlock;`
+        将通过一直左划的方式，通过block回调进入主界面。
+    - `+ (instancetype)newFeatureWithImageName:(NSString *)imageName imageCount:(NSInteger)imageCount showPageControl:(BOOL)showPageControl enterButton:(UIButton *)enterButton;`
+        将在最后一张新特性图片上添加一个按钮，然后点击按钮进入主界面，按钮的属性设置好再传入（参考Demo中的代码）。
 
 * 提供了一些属性，可选设置：
     - 当前点(分页控制器)的颜色：`pointCurrentColor`。
