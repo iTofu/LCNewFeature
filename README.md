@@ -2,7 +2,7 @@
 几行代码快速集成新特性界面!
 
 ## 前言
-每次拿到一个项目的时候，头疼的几件事之一就是新特性界面，写一堆代码做一个简单的东西。所以写了个快速集成新特性界面的框架，传了上来。
+每次拿到一个项目的时候，头疼的几件事之一就是新特性界面，写一堆代码做一个简单的东西。所以抽空写了个快速集成新特性界面的框架，传了上来。
 
 ## 代码
 * 在Demo中找到`LCNewFeature`文件夹，拖拽到你的项目中。
@@ -70,6 +70,7 @@
     + (instancetype)newFeatureWithImageName:(NSString *)imageName imageCount:(NSInteger)imageCount showPageControl:(BOOL)showPageControl enterButton:(UIButton *)enterButton;
         将在最后一张新特性图片上添加一个按钮，然后点击按钮进入主界面，按钮的属性设置好再传入（参考Demo中的代码）。
     ```
+* 上述方法都是类方法，也提供了实例方法`initWith`什么的，视个人习惯调用。
 
 * 提供了一些属性，可选设置：
 
@@ -77,6 +78,7 @@
     - 其他点(分页控制器)的颜色：`pointOtherColor`
     - 状态栏样式：`statusBarStyle`
 
+* 经理可以顶，但是美工的妹子和服务器的哥们绝对不能惹！2333
 * 多参考Demo，如果还有问题或者建议，请联系我，我也想做的更好！联系方式在下面:)
 
 ## 联系
