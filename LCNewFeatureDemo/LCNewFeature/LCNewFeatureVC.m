@@ -175,6 +175,7 @@
             UIPageControl *pageControl = [[UIPageControl alloc] init];
             [pageControl setNumberOfPages:_imageCount];
             [pageControl setHidesForSinglePage:YES];
+            [pageControl setUserInteractionEnabled:NO];
             [pageControl setPageIndicatorTintColor:[UIColor lightGrayColor]];
             [pageControl setCurrentPageIndicatorTintColor:[UIColor darkGrayColor]];
             [pageControl setFrame:(CGRect){0, SCREEN_SIZE.height * 0.9, SCREEN_SIZE.width, 37.0f}];
