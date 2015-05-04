@@ -3,10 +3,10 @@
 
 ![image](https://github.com/LeoiOS/LCNewFeature/blob/master/ScreenShot.png)
 
-## 前言 Foreword
+### 前言 Foreword
 每次拿到一个项目的时候，头疼的几件事之一就是新特性界面，写一堆代码做一个简单的东西。所以抽空写了个快速集成新特性界面的框架，传了上来。
 
-## 代码 Code
+### 代码 Code
 * 下面是示例代码，请多参考Demo！！
 * 在Demo中找到`LCNewFeature`文件夹，拖拽到你的项目中。
 * 在`AppDelegate.m`文件中，导入头文件：`#import "LCNewFeature.h"`，参考下列代码快速集成：
@@ -65,7 +65,7 @@
     `NewFeature_1_iphone6p@2x.png`  将展示在iPhone6Plus上
     ```
 
-## Tips
+### 提示 Tips
 * 提供了两种进入主界面的方式：
     
     ```objc
@@ -87,7 +87,10 @@
 
 * 多参考Demo，如果还有问题或者建议，请联系我，我也想做的更好！联系方式在下面:)
 
-## 联系 Support
+### 联系 Support
 * 发现问题请lssues我，谢谢:)
 * Email: leoios@sina.com
 * Website:  http://www.leodong.com/ (备案中……)
+
+### 授权 License
+本项目采用 [MIT license](http://opensource.org/licenses/MIT) 开源，你可以利用采用该协议的代码做任何事情，只需要继续继承 MIT 协议即可。
