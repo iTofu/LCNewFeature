@@ -3,10 +3,10 @@
 
 ![image](https://github.com/LeoiOS/LCNewFeature/blob/master/ScreenShot.png)
 
-## 前言
+## 前言 Foreword
 每次拿到一个项目的时候，头疼的几件事之一就是新特性界面，写一堆代码做一个简单的东西。所以抽空写了个快速集成新特性界面的框架，传了上来。
 
-## 代码
+## 代码 Code
 * 下面是示例代码，请多参考Demo！！
 * 在Demo中找到`LCNewFeature`文件夹，拖拽到你的项目中。
 * 在`AppDelegate.m`文件中，导入头文件：`#import "LCNewFeature.h"`，参考下列代码快速集成：
@@ -68,7 +68,7 @@
 ## Tips
 * 提供了两种进入主界面的方式：
     
-    ```
+    ```ruby
     + (instancetype)newFeatureWithImageName:(NSString *)imageName imageCount:(NSInteger)imageCount showPageControl:(BOOL)showPageControl finishBlock:(finishBlock)finishBlock;
         将通过一直左划的方式，通过block回调进入主界面。
     + (instancetype)newFeatureWithImageName:(NSString *)imageName imageCount:(NSInteger)imageCount showPageControl:(BOOL)showPageControl enterButton:(UIButton *)enterButton;
@@ -87,6 +87,7 @@
 
 * 多参考Demo，如果还有问题或者建议，请联系我，我也想做的更好！联系方式在下面:)
 
-## 联系
+## 联系 Support
 * 发现问题请lssues我，谢谢:)
-* Email: leoios@sina.com
+* Email:    leoios@sina.com
+* Website:  http://www.leodong.com/ (备案中……)
