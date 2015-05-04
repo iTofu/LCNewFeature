@@ -11,7 +11,7 @@
 * 在Demo中找到`LCNewFeature`文件夹，拖拽到你的项目中。
 * 在`AppDelegate.m`文件中，导入头文件：`#import "LCNewFeature.h"`，参考下列代码快速集成：
     
-    ```
+    ```objc
     BOOL showNewFeature = [LCNewFeatureVC shouldShowNewFeature];
     
     if (showNewFeature) {   // 如果需要显示新特性界面
@@ -35,7 +35,7 @@
     
 * `enterMainVC`(进入主界面)方法参考：
     
-    ```
+    ```objc
     - (void)enterMainVC {
         
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
@@ -68,7 +68,7 @@
 ## Tips
 * 提供了两种进入主界面的方式：
     
-    ```ruby
+    ```objc
     + (instancetype)newFeatureWithImageName:(NSString *)imageName imageCount:(NSInteger)imageCount showPageControl:(BOOL)showPageControl finishBlock:(finishBlock)finishBlock;
         将通过一直左划的方式，通过block回调进入主界面。
     + (instancetype)newFeatureWithImageName:(NSString *)imageName imageCount:(NSInteger)imageCount showPageControl:(BOOL)showPageControl enterButton:(UIButton *)enterButton;
@@ -89,5 +89,5 @@
 
 ## 联系 Support
 * 发现问题请lssues我，谢谢:)
-* Email:    leoios@sina.com
+* Email: leoios@sina.com
 * Website:  http://www.leodong.com/ (备案中……)
