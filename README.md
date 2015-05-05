@@ -65,6 +65,9 @@
     `NewFeature_1_iphone6p@2x.png`  将展示在iPhone6Plus上
     ```
 
+### 更新日志 2015.05.05 Update Logs
+* 添加一些界面跳转的动画效果。
+
 ### 提示 Tips
 * 提供了两种进入主界面的方式：
     
@@ -90,7 +93,7 @@
 ### 联系 Support
 * 发现问题请lssues我，谢谢:)
 * Email: leoios@sina.com
-* Website:  http://www.leodong.com/ (备案中……)
+* Website:  http://www.leodong.com/ (备案中暂请通过IP访问：http://115.28.243.22/)
 
 ### 授权 License
 本项目采用 [MIT license](http://opensource.org/licenses/MIT) 开源，你可以利用采用该协议的代码做任何事情，只需要继续继承 MIT 协议即可。
