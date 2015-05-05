@@ -49,6 +49,9 @@
 
 #import <UIKit/UIKit.h>
 
+// 屏幕尺寸
+#define SCREEN_SIZE [UIScreen mainScreen].bounds.size
+
 /**
  *  完成新特性界面展示后的block回调
  */

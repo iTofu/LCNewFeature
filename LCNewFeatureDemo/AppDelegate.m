@@ -12,7 +12,11 @@
 // 屏幕尺寸
 #define SCREEN_SIZE [UIScreen mainScreen].bounds.size
 
-@interface AppDelegate ()
+@interface AppDelegate () {
+    
+    /** 新特性界面(如果是通过Block方式进入主界面则不需要声明该属性) */
+    LCNewFeatureVC *_newFeatureVC;
+}
 
 @end
 
@@ -39,22 +43,24 @@
         
 #pragma mark 2.1. 方式一: 点击添加的按钮进入主界面
         
+        /*
         // 进入主界面按钮
         UIButton *enterBtn = [[UIButton alloc] init];
         [enterBtn setBackgroundColor:[UIColor redColor]];
         [enterBtn setTitle:@"进入主界面" forState:UIControlStateNormal];
         [enterBtn setFrame:(CGRect){10.0f, SCREEN_SIZE.height * 0.82, SCREEN_SIZE.width - 20.0f, 30.0f}];
-        [enterBtn addTarget:self action:@selector(enterMainVC) forControlEvents:UIControlEventTouchUpInside];
+        [enterBtn addTarget:self action:@selector(didClickedBtn) forControlEvents:UIControlEventTouchUpInside];
         
         LCNewFeatureVC *newFeatureVC = [LCNewFeatureVC newFeatureWithImageName:@"new_feature"
                                                                     imageCount:3
                                                                 showPageControl:YES
                                                                    enterButton:enterBtn];
-
+        _newFeatureVC = newFeatureVC;
+        */
         
 #pragma mark 2.2. 方式二: 一直左划进入主界面
         
-        /*
+        
         __weak typeof(self) weakSelf = self;
         LCNewFeatureVC *newFeatureVC = [LCNewFeatureVC newFeatureWithImageName:@"new_feature"
                                                                     imageCount:3
@@ -63,7 +69,7 @@
                                                                        
                                                                        [weakSelf enterMainVC];
                                                                    }];
-        */
+        
         
 #pragma mark 3. 设置新特性界面的属性(可选步骤)
         
@@ -92,6 +98,20 @@
     [self.window makeKeyAndVisible];
     
     return YES;
+}
+
+#pragma mark - 点击了进入主界面的按钮
+
+- (void)didClickedBtn {
+    
+    [UIView animateWithDuration:0.4f animations:^{
+        
+        _newFeatureVC.view.transform = CGAffineTransformMakeTranslation(-SCREEN_SIZE.width, 0);
+        
+    } completion:^(BOOL finished) {
+        
+        [self enterMainVC];
+    }];
 }
 
 #pragma mark - 进入主界面

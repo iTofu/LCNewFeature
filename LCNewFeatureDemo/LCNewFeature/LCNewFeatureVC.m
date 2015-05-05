@@ -10,9 +10,6 @@
 #import "LCNewFeatureVC.h"
 #import "UIImage+LC.h"
 
-// 屏幕尺寸
-#define SCREEN_SIZE [UIScreen mainScreen].bounds.size
-
 @interface LCNewFeatureVC () <UIScrollViewDelegate> {
     
     /** 图片名 */
@@ -249,7 +246,14 @@
         
         if (_finishBlock) {
             
-            _finishBlock();
+            [UIView animateWithDuration:0.4f animations:^{
+                
+                self.view.transform = CGAffineTransformMakeTranslation(-SCREEN_SIZE.width, 0);
+                
+            } completion:^(BOOL finished) {
+                
+                _finishBlock();
+            }];
         }
     }
 }
