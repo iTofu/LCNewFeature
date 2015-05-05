@@ -22,6 +22,9 @@
  *
  *  @param iphone6p 是否有iPhone6P的图片, 默认`NO`, 无图片; 有图片请参考命名: `<name>_iphone6p`, 如: `Apple_iphone6p@2x.png`
  */
-+ (instancetype)imageNamedForAdaptation:(NSString *)imageName iphone5:(BOOL)iphone5 iphone6:(BOOL)iphone6 iphone6p:(BOOL)iphone6p;
++ (instancetype)imageNamedForAdaptation:(NSString *)imageName
+                                iphone5:(BOOL)iphone5
+                                iphone6:(BOOL)iphone6
+                               iphone6p:(BOOL)iphone6p;
 
 @end
