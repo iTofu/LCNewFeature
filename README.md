@@ -93,7 +93,7 @@
 ### 联系 Support
 * 发现问题请lssues我，谢谢:)
 * Email: leoios@sina.com
-* Website:  http://www.leodong.com/ (备案中暂请通过IP访问：http://115.28.243.22/)
+* Website:  http://www.leodong.com/
 
 ### 授权 License
 本项目采用 [MIT license](http://opensource.org/licenses/MIT) 开源，你可以利用采用该协议的代码做任何事情，只需要继续继承 MIT 协议即可。
