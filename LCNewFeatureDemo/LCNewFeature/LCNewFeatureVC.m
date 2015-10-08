@@ -128,6 +128,8 @@
 
 - (void)setupMainView {
     
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     // 默认状态栏样式为黑色
     self.statusBarStyle = LCStatusBarStyleBlack;
     
