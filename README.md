@@ -9,7 +9,7 @@
 ### 代码 Code
 * 下面是示例代码，请多参考Demo！！
 * 
-  - 方法一：[CocoaPods](https://cocoapods.org/) 导入：`pod 'LCActionSheet'`
+  - 方法一：[CocoaPods](https://cocoapods.org/) 导入：`pod 'LCNewFeature'`
   - 方法二：在Demo中找到`LCNewFeature`文件夹，拖拽到你的项目中。
 * 在`AppDelegate.m`文件中，导入头文件：`#import "LCNewFeature.h"`，参考下列代码快速集成：
     
