@@ -8,7 +8,9 @@
 
 ### 代码 Code
 * 下面是示例代码，请多参考Demo！！
-* 在Demo中找到`LCNewFeature`文件夹，拖拽到你的项目中。
+* 
+  - 方法一：[CocoaPods](https://cocoapods.org/) 导入：`pod 'LCActionSheet'`
+  - 方法二：在Demo中找到`LCNewFeature`文件夹，拖拽到你的项目中。
 * 在`AppDelegate.m`文件中，导入头文件：`#import "LCNewFeature.h"`，参考下列代码快速集成：
     
     ```objc
@@ -63,9 +65,12 @@
     `NewFeature_1_iphone5@2x.png`   将展示在iPhone5/5S上
     `NewFeature_1_iphone6@2x.png`   将展示在iPhone6上
     `NewFeature_1_iphone6p@2x.png`  将展示在iPhone6Plus上
-    ```
+```
 
-### 更新日志 2015.05.05 Update Logs
+### 更新日志 2015.11.09 Update Logs (Tag: 1.0.2)
+* 添加对 CocoaPods 的支持：`pod 'LCNewFeature'`
+
+### 更新日志 2015.05.05 Update Logs (Tag: 1.0.0)
 * 添加一些界面跳转的动画效果。
 
 ### 提示 Tips
@@ -78,7 +83,7 @@
         将在最后一张新特性图片上添加一个按钮，然后点击按钮进入主界面，按钮的属性设置好再传入（参考Demo中的代码）。
     ```
 
-* 上述方法都是类方法，也提供了实例方法`initWith`什么的，视个人习惯调用。
+* 上述方法都是类方法，也提供了实例方法`initWith...`什么的，视个人习惯调用。
 
 * 提供了一些属性，可选设置：
 
