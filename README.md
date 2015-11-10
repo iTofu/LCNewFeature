@@ -68,7 +68,7 @@
 ```
 
 ### 更新日志 2015.11.09 Update Logs (Tag: 1.0.2)
-* 添加对 CocoaPods 的支持：`pod 'LCNewFeature'`
+* 添加对 [CocoaPods](https://cocoapods.org/) 的支持：`pod 'LCNewFeature'`
 
 ### 更新日志 2015.05.05 Update Logs (Tag: 1.0.0)
 * 添加一些界面跳转的动画效果。
