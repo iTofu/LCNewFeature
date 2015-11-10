@@ -96,7 +96,7 @@
 * 多参考Demo，如果还有问题或者建议，请联系我，我也想做的更好！联系方式在下面:)
 
 ### 联系 Support
-* 发现问题请lssues我，谢谢:)
+* 发现问题请Issues我，谢谢:)
 * Email: leoios@sina.com
 * Website:  http://www.leodong.com/
 
