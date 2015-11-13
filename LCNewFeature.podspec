@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
 
   s.name         = "LCNewFeature"
-  s.version      = "1.0.2"
-  s.summary      = "Finish new feature interface with a few lines of code."
+  s.version      = "1.0.3"
+  s.summary      = "Finish new feature interface with a few lines of code. Support: http://www.leodong.com"
   s.homepage     = "https://github.com/LeoiOS/LCNewFeature"
   # s.license      = "MIT"
   s.license      = { :type => "MIT", :file => "LICENSE" }

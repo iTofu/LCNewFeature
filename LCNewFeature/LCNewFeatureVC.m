@@ -37,6 +37,24 @@
 
 @implementation LCNewFeatureVC
 
+#pragma mark - 设备型号
+
+- (DeviceModel)deviceModel {
+    
+    CGSize screenSize = [UIScreen mainScreen].bounds.size;
+    if (10 * screenSize.height / screenSize.width == 15) {          // iPhone 4 / 4s
+        
+        return DeviceModeliPhone4;
+        
+    } else if (10 * screenSize.height / screenSize.width == 17) {   // iPhone 5 / 6 / 6 p / 6s / 6s p
+        
+        return DeviceModeliPhone56;
+        
+    }
+    
+    return DeviceModelUnknow;
+}
+
 #pragma mark - 是否显示新特性视图控制器
 
 + (BOOL)shouldShowNewFeature {
@@ -95,10 +113,10 @@
     
     if (self = [super init]) {
         
-        _imageName = imageName;
-        _imageCount = imageCount;
+        _imageName       = imageName;
+        _imageCount      = imageCount;
         _showPageControl = showPageControl;
-        _enterButton = enterButton;
+        _enterButton     = enterButton;
         
         [self setupMainView];
     }
@@ -113,10 +131,10 @@
     
     if (self = [super init]) {
         
-        _imageName = imageName;
-        _imageCount = imageCount;
+        _imageName       = imageName;
+        _imageCount      = imageCount;
         _showPageControl = showPageControl;
-        _finishBlock = finishBlock;
+        _finishBlock     = finishBlock;
         
         [self setupMainView];
     }

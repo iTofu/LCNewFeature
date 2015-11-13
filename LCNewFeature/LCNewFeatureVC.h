@@ -6,6 +6,7 @@
 //  GitHub: http://github.com/LeoiOS
 //  如有问题或建议请给我发 Email, 或在该项目的 GitHub 主页 Issues 我, 谢谢:)
 //
+//  V 1.0.3
 
 //  !! warning 必读!! 可删除该警告!!
 
@@ -25,23 +26,23 @@
  *      ...
  *
  *
- *  2. 怎么适配iPhone5\5s, iPhone6, iPhone6Plus?
+ *  2. 怎么适配 iPhone 5 / 5s, iPhone 6 / 6s, iPhone 6 p / 6s p?
  *
- *      iPhone5\5s的图片请在名字后面拼接`_iphone5`;
- *      iPhone6的图片请在名字后面拼接`_iphone6`;
- *      iPhone6Plus的图片请在名字后面拼接`_iphone6p`;
+ *      iPhone 5 / 5s 的图片请在名字后面拼接 `_iphone5`;
+ *      iPhone 6 / 6s 的图片请在名字后面拼接 `_iphone6`;
+ *      iPhone 6 p / 6s p 的图片请在名字后面拼接 `_iphone6p`;
  *
  *      如:
- *      `NewFeature_1@2x.png`           将展示在iPhone4/4S上
- *      `NewFeature_1_iphone5@2x.png`   将展示在iPhone5/5S上
- *      `NewFeature_1_iphone6@2x.png`   将展示在iPhone6上
- *      `NewFeature_1_iphone6p@2x.png`  将展示在iPhone6Plus上
+ *      `NewFeature_1@2x.png`           将展示在 iPhone 4 / 4s 上
+ *      `NewFeature_1_iphone5@2x.png`   将展示在 iPhone 5 / 5s 上
+ *      `NewFeature_1_iphone6@2x.png`   将展示在 iPhone 6 / 6s 上
+ *      `NewFeature_1_iphone6p@2x.png`  将展示在 iPhone 6 p / 6s p 上
  *
  *
- *  3. 如果想变更状态栏的样式, 打开项目的Info.plist, 先添加下列键值对, 然后statusBarStyle属性才会生效:
+ *  3. 如果想变更状态栏的样式, 打开项目的 Info.plist, 先添加下列键值对, 然后 statusBarStyle 属性才会生效:
  *      
- *      Key  :  View controller-based status bar appearance
- *      Value:  NO
+ *      Key   :  View controller-based status bar appearance
+ *      Value :  NO (添加 Key 后，Value 默认值就是 NO)
  *
  *
  *  4. 如果还有问题或者建议, 请联系我, 我也想做的更好! 联系方式在顶部:)
@@ -58,18 +59,26 @@
 typedef void (^finishBlock)();
 
 /**
- *  状态栏样式
+ 状态栏样式
  */
-typedef NS_ENUM(NSInteger, LCStatusBarStyle) {
-    /** 黑色 */
-    LCStatusBarStyleBlack,
-    /** 白色 */
-    LCStatusBarStyleWhite,
-    /** 隐藏 */
-    LCStatusBarStyleNone
-};
+typedef enum : NSUInteger {
+    LCStatusBarStyleBlack,  // 黑色
+    LCStatusBarStyleWhite,  // 白色
+    LCStatusBarStyleNone,   // 隐藏
+} LCStatusBarStyle;
+
+/**
+ 设备型号
+ */
+typedef enum : NSUInteger {
+    DeviceModelUnknow,      // 未知设备
+    DeviceModeliPhone4,     // iPhone 4 / 4s
+    DeviceModeliPhone56,    // iPhone 5 / 5s / 6 / 6 p / 6s / 6s p
+    DeviceModeliPad,        // iPad
+} DeviceModel;
 
 @interface LCNewFeatureVC : UIViewController
+
 
 
 #pragma mark - 属性 Properties
@@ -78,14 +87,23 @@ typedef NS_ENUM(NSInteger, LCStatusBarStyle) {
  *  当前点(分页控制器)的颜色
  */
 @property (nonatomic, strong) UIColor *pointCurrentColor;
+
 /**
  *  其他点(分页控制器)的颜色
  */
 @property (nonatomic, strong) UIColor *pointOtherColor;
+
 /**
  *  状态栏样式, 请先参考`必读`第3条设置
  */
 @property (nonatomic, assign) LCStatusBarStyle statusBarStyle;
+
+///**
+// *  设备型号
+// */
+//@property (nonatomic, assign) DeviceModel deviceModel;
+
+
 
 #pragma mark - 方法 Methods
 

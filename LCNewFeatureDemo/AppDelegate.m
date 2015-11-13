@@ -14,7 +14,7 @@
 
 @interface AppDelegate () {
     
-    /** 新特性界面(如果是通过Block方式进入主界面则不需要声明该属性) */
+    /** 新特性界面 (如果是通过 Block 方式进入主界面则不需要声明该属性) */
     LCNewFeatureVC *_newFeatureVC;
 }
 

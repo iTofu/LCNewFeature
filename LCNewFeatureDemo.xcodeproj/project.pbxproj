@@ -104,8 +104,6 @@
 				B3BC78031AF1C2E500276D01 /* ViewController.h */,
 				B3BC78041AF1C2E500276D01 /* ViewController.m */,
 				B3BC78061AF1C2E500276D01 /* Main.storyboard */,
-				B3BC78091AF1C2E500276D01 /* Images.xcassets */,
-				B3BC780B1AF1C2E500276D01 /* LaunchScreen.xib */,
 				B3BC77FC1AF1C2E500276D01 /* Supporting Files */,
 			);
 			path = LCNewFeatureDemo;
@@ -114,6 +112,8 @@
 		B3BC77FC1AF1C2E500276D01 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B3BC78091AF1C2E500276D01 /* Images.xcassets */,
+				B3BC780B1AF1C2E500276D01 /* LaunchScreen.xib */,
 				B3BC77FD1AF1C2E500276D01 /* Info.plist */,
 				B3BC77FE1AF1C2E500276D01 /* main.m */,
 			);
@@ -370,6 +370,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LCNewFeatureDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -380,6 +381,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LCNewFeatureDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

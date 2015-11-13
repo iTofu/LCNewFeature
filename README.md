@@ -61,11 +61,17 @@
     比如图片原名：`NewFeature_1@2x.png` 
     
     规范：
-    `NewFeature_1@2x.png`           将展示在iPhone4/4S上
-    `NewFeature_1_iphone5@2x.png`   将展示在iPhone5/5S上
-    `NewFeature_1_iphone6@2x.png`   将展示在iPhone6上
-    `NewFeature_1_iphone6p@2x.png`  将展示在iPhone6Plus上
+    `NewFeature_1@2x.png`           将展示在 iPhone 4 / 4s 上
+    `NewFeature_1_iphone5@2x.png`   将展示在 iPhone 5 / 5s 上
+    `NewFeature_1_iphone6@2x.png`   将展示在 iPhone 6 / 6s 上
+    `NewFeature_1_iphone6p@2x.png`  将展示在 iPhone 6 p / 6s p 上
 ```
+
+### 更新日志 2015.11.13 Update Logs (Tag: 1.0.3)
+* 添加对 iPhone 6 / 6s / 6 p / 6s p 的放大模式的支持，感谢 [RobinChao](https://github.com/RobinChao) 等同学的提醒。
+* 已针对放大模式进行了显示测试和边框校对，例：Demo 中的 iPhone 6 / 6s 第一张启动图。(根目录下有个 PSD 文件，参考修改)附：放大模式下屏幕分辨率：
+  - iPhone 6 / 6s 的放大模式下，屏幕分辨率为：640 x 1136 (框架将使用 iPhone 5 的图)
+  - iPhone 6 p / 6s p 的放大模式下，屏幕分辨率为：1125 x 2001 (框架将使用 iPhone 6 p 的图)
 
 ### 更新日志 2015.11.09 Update Logs (Tag: 1.0.2)
 * 添加对 CocoaPods 的支持：`pod 'LCNewFeature'`
@@ -96,7 +102,7 @@
 * 多参考Demo，如果还有问题或者建议，请联系我，我也想做的更好！联系方式在下面:)
 
 ### 联系 Support
-* 发现问题请Issues我，谢谢:)
+* 发现问题请 Issues 我，谢谢:)
 * Email: leoios@sina.com
 * Website:  http://www.leodong.com/
 
