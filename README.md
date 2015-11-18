@@ -1,12 +1,20 @@
-## LCNewFeature
+# LCNewFeature
 几行代码快速集成新特性界面!
 
 ![image](https://github.com/LeoiOS/LCNewFeature/blob/master/ScreenShot.png)
 
-### 前言 Foreword
+  ```
+  心有猛虎，细嗅蔷薇。
+  ```
+
+
+
+## 前言 Foreword
 每次拿到一个项目的时候，头疼的几件事之一就是新特性界面，写一堆代码做一个简单的东西。所以抽空写了个快速集成新特性界面的框架，传了上来。
 
-### 代码 Code
+
+
+## 代码 Code
 * 下面是示例代码，请多参考Demo！！
 * 
   - 方法一：[CocoaPods](https://cocoapods.org/) 导入：`pod 'LCNewFeature'`
@@ -65,21 +73,29 @@
     `NewFeature_1_iphone5@2x.png`   将展示在 iPhone 5 / 5s 上
     `NewFeature_1_iphone6@2x.png`   将展示在 iPhone 6 / 6s 上
     `NewFeature_1_iphone6p@2x.png`  将展示在 iPhone 6 p / 6s p 上
-```
+  ```
 
-### 更新日志 2015.11.13 Update Logs (Tag: 1.0.3)
+
+
+## 更新日志 2015.11.13 Update Logs (Tag: 1.0.3)
 * 添加对 iPhone 6 / 6s / 6 p / 6s p 的放大模式的支持，感谢 [RobinChao](https://github.com/RobinChao) 等同学的提醒。
 * 已针对放大模式进行了显示测试和边框校对，例：Demo 中的 iPhone 6 / 6s 第一张启动图。(根目录下有个 PSD 文件，参考修改)附：放大模式下屏幕分辨率：
   - iPhone 6 / 6s 的放大模式下，屏幕分辨率为：640 x 1136 (框架将使用 iPhone 5 的图)
   - iPhone 6 p / 6s p 的放大模式下，屏幕分辨率为：1125 x 2001 (框架将使用 iPhone 6 p 的图)
 
-### 更新日志 2015.11.09 Update Logs (Tag: 1.0.2)
+
+
+## 更新日志 2015.11.09 Update Logs (Tag: 1.0.2)
 * 添加对 [CocoaPods](https://cocoapods.org/) 的支持：`pod 'LCNewFeature'`
 
-### 更新日志 2015.05.05 Update Logs (Tag: 1.0.0)
+
+
+## 更新日志 2015.05.05 Update Logs (Tag: 1.0.0)
 * 添加一些界面跳转的动画效果。
 
-### 提示 Tips
+
+
+## 提示 Tips
 * 提供了两种进入主界面的方式：
     
     ```objc
@@ -101,10 +117,14 @@
 
 * 多参考Demo，如果还有问题或者建议，请联系我，我也想做的更好！联系方式在下面:)
 
-### 联系 Support
+
+
+## 联系 Support
 * 发现问题请 Issues 我，谢谢:)
 * Email: leoios@sina.com
-* Website:  http://www.leodong.com/
+* Blog:  http://www.leodong.com
 
-### 授权 License
+
+
+## 授权 License
 本项目采用 [MIT license](http://opensource.org/licenses/MIT) 开源，你可以利用采用该协议的代码做任何事情，只需要继续继承 MIT 协议即可。
