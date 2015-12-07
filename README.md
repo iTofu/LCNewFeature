@@ -3,9 +3,9 @@
 
 ![image](https://github.com/LeoiOS/LCNewFeature/blob/master/ScreenShot.png)
 
-  ```
+  ````
   心有猛虎，细嗅蔷薇。
-  ```
+  ````
 
 
 
@@ -18,10 +18,10 @@
 * 下面是示例代码，请多参考Demo！！
 * 
   - 方法一：[CocoaPods](https://cocoapods.org/) 导入：`pod 'LCNewFeature'`
-  - 方法二：在Demo中找到`LCNewFeature`文件夹，拖拽到你的项目中。
-* 在`AppDelegate.m`文件中，导入头文件：`#import "LCNewFeature.h"`，参考下列代码快速集成：
+  - 方法二：在Demo中找到 `LCNewFeature` 文件夹，拖拽到你的项目中。
+* 在 `AppDelegate.m` 文件中，导入头文件：`#import "LCNewFeature.h"`，参考下列代码快速集成：
     
-    ```objc
+    ````objc
     BOOL showNewFeature = [LCNewFeatureVC shouldShowNewFeature];
     
     if (showNewFeature) {   // 如果需要显示新特性界面
@@ -41,31 +41,31 @@
         
         [self enterMainVC];
     }
-    ```
+    ````
     
-* `enterMainVC`(进入主界面)方法参考：
+* `enterMainVC` (进入主界面) 方法参考：
     
-    ```objc
+    ````objc
     - (void)enterMainVC {
         
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         
         self.window.rootViewController = storyboard.instantiateInitialViewController;
     }
-    ```
+    ````
 
 * 有一些神奇的地方，比如赋值只需要传一次图片名是为什么？其实是这样的，你需要按以下规范来给图片命名：（这其实是美工的事:)）
-    ```
+    ````
     比如图片原名：`NewFeature@2x.png`
     
     规范：
     `NewFeature_1@2x.png`   将作为第一张图展示
     `NewFeature_2@2x.png`   将作为第二张图展示
     ...
-    ```
+    ````
 
 * 那么怎么适配不同尺寸的屏幕呢？简单，不用动代码，还是规范图片命名：（这还是美工的事:)）
-    ```
+````
     比如图片原名：`NewFeature_1@2x.png` 
     
     规范：
@@ -73,7 +73,12 @@
     `NewFeature_1_iphone5@2x.png`   将展示在 iPhone 5 / 5s 上
     `NewFeature_1_iphone6@2x.png`   将展示在 iPhone 6 / 6s 上
     `NewFeature_1_iphone6p@2x.png`  将展示在 iPhone 6 p / 6s p 上
-  ```
+````
+
+
+
+## 更新日志 2015.12.07 Update Logs (Tag: 1.0.2)
+* Demo 中添加演示：切换 RootVC 时，如何搞淡入淡出效果。😈😈
 
 
 
@@ -82,11 +87,6 @@
 * 已针对放大模式进行了显示测试和边框校对，例：Demo 中的 iPhone 6 / 6s 第一张启动图。(根目录下有个 PSD 文件，参考修改)附：放大模式下屏幕分辨率：
   - iPhone 6 / 6s 的放大模式下，屏幕分辨率为：640 x 1136 (框架将使用 iPhone 5 的图)
 - iPhone 6 p / 6s p 的放大模式下，屏幕分辨率为：1125 x 2001 (框架将使用 iPhone 6 p 的图)
-
-
-
-## 更新日志 2015.12.07 Update Logs (Tag: 1.0.2)
-* Demo 中添加演示：切换 RootVC 时，如何搞淡入淡出效果。😈😈
 
 
 
