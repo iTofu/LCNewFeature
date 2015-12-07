@@ -81,7 +81,12 @@
 * 添加对 iPhone 6 / 6s / 6 p / 6s p 的放大模式的支持，感谢 [RobinChao](https://github.com/RobinChao) 等同学的提醒。
 * 已针对放大模式进行了显示测试和边框校对，例：Demo 中的 iPhone 6 / 6s 第一张启动图。(根目录下有个 PSD 文件，参考修改)附：放大模式下屏幕分辨率：
   - iPhone 6 / 6s 的放大模式下，屏幕分辨率为：640 x 1136 (框架将使用 iPhone 5 的图)
-  - iPhone 6 p / 6s p 的放大模式下，屏幕分辨率为：1125 x 2001 (框架将使用 iPhone 6 p 的图)
+- iPhone 6 p / 6s p 的放大模式下，屏幕分辨率为：1125 x 2001 (框架将使用 iPhone 6 p 的图)
+
+
+
+## 更新日志 2015.12.07 Update Logs (Tag: 1.0.2)
+* Demo 中添加演示：切换 RootVC 时，如何搞淡入淡出效果。😈😈
 
 
 
@@ -120,9 +125,9 @@
 
 
 ## 联系 Support
-* 发现问题请 Issues 我，谢谢:)
-* Email: leoios@sina.com
-* Blog:  http://www.leodong.com
+* 发现问题请 Issues，谢谢 :)
+* Email: leoios@sina.com & liucsuper@gmail.com
+* Blog:  http://LeoDev.me
 
 
 

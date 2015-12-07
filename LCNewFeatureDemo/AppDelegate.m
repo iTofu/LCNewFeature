@@ -44,12 +44,12 @@
         
 #pragma mark 2.1. 方式一: 点击添加的按钮进入主界面
         
-        /*
+        
         // 进入主界面按钮
         UIButton *enterBtn = [[UIButton alloc] init];
         [enterBtn setBackgroundColor:[UIColor redColor]];
         [enterBtn setTitle:@"进入主界面" forState:UIControlStateNormal];
-        [enterBtn setFrame:(CGRect){10.0f, SCREEN_SIZE.height * 0.82, SCREEN_SIZE.width - 20.0f, 30.0f}];
+        [enterBtn setFrame:(CGRect){10.0f, SCREEN_SIZE.height * 0.82, SCREEN_SIZE.width - 20.0f, 40.0f}];
         [enterBtn addTarget:self action:@selector(didClickedBtn) forControlEvents:UIControlEventTouchUpInside];
         
         LCNewFeatureVC *newFeatureVC = [LCNewFeatureVC newFeatureWithImageName:@"new_feature"
@@ -57,11 +57,11 @@
                                                                 showPageControl:YES
                                                                    enterButton:enterBtn];
         _newFeatureVC = newFeatureVC;
-        */
+        
         
 #pragma mark 2.2. 方式二: 一直左划进入主界面
         
-        
+        /*
         __weak typeof(self) weakSelf = self;
         LCNewFeatureVC *newFeatureVC = [LCNewFeatureVC newFeatureWithImageName:@"new_feature"
                                                                     imageCount:3
@@ -70,7 +70,7 @@
                                                                        
                                                                        [weakSelf enterMainVC];
                                                                    }];
-        
+        */
         
 #pragma mark 3. 设置新特性界面的属性(可选步骤)
         
@@ -105,14 +105,7 @@
 
 - (void)didClickedBtn {
     
-    [UIView animateWithDuration:0.4f animations:^{
-        
-        _newFeatureVC.view.transform = CGAffineTransformMakeTranslation(-SCREEN_SIZE.width, 0);
-        
-    } completion:^(BOOL finished) {
-        
-        [self enterMainVC];
-    }];
+    [self enterMainVC];
 }
 
 #pragma mark - 进入主界面
@@ -121,7 +114,19 @@
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
-    self.window.rootViewController = storyboard.instantiateInitialViewController;
+    [self restoreRootViewController:storyboard.instantiateInitialViewController];
+}
+
+- (void)restoreRootViewController:(UIViewController *)rootViewController {
+    
+    [UIView transitionWithView:self.window duration:0.7f options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+        
+        BOOL oldState = [UIView areAnimationsEnabled];
+        [UIView setAnimationsEnabled:NO];
+        self.window.rootViewController = rootViewController;
+        [UIView setAnimationsEnabled:oldState];
+        
+    } completion:nil];
 }
 
 @end
