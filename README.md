@@ -150,10 +150,10 @@
 
 
 ## 联系 Support
-* 发现问题请 Issues，谢谢 :)
-* Email: leoios@sina.com & liucsuper@gmail.com
-* Blog:  http://LeoDev.me
 
+* 发现问题请 Issues，谢谢 :)
+* Main: devtip@163.com
+* Blog:  http://LeoDev.me
 
 
 ## 授权 License
