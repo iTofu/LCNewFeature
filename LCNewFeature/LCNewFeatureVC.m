@@ -31,6 +31,8 @@
     finishBlock _finishBlock;
 }
 
+@property (nonatomic, weak) UIButton *skipBtn;
+
 @end
 
 
@@ -160,13 +162,13 @@
         [scrollView setBounces:NO];
         [scrollView setPagingEnabled:YES];
         [scrollView setShowsHorizontalScrollIndicator:NO];
-        [scrollView setFrame:(CGRect){0, 0, SCREEN_SIZE}];
-        [scrollView setContentSize:(CGSize){SCREEN_SIZE.width * _imageCount, 0}];
+        [scrollView setFrame:(CGRect){0, 0, LC_NEW_FEATURE_SCREEN_SIZE}];
+        [scrollView setContentSize:(CGSize){LC_NEW_FEATURE_SCREEN_SIZE.width * _imageCount, 0}];
         [self.view addSubview:scrollView];
         
         // 滚动图片
-        CGFloat imageW = SCREEN_SIZE.width;
-        CGFloat imageH = SCREEN_SIZE.height;
+        CGFloat imageW = LC_NEW_FEATURE_SCREEN_SIZE.width;
+        CGFloat imageH = LC_NEW_FEATURE_SCREEN_SIZE.height;
         
         for (int i = 0; i < _imageCount; i++) {
             
@@ -195,15 +197,50 @@
             [pageControl setUserInteractionEnabled:NO];
             [pageControl setPageIndicatorTintColor:[UIColor lightGrayColor]];
             [pageControl setCurrentPageIndicatorTintColor:[UIColor darkGrayColor]];
-            [pageControl setFrame:(CGRect){0, SCREEN_SIZE.height * 0.9, SCREEN_SIZE.width, 37.0f}];
+            [pageControl setFrame:(CGRect){0, LC_NEW_FEATURE_SCREEN_SIZE.height * 0.9, LC_NEW_FEATURE_SCREEN_SIZE.width, 37.0f}];
             [self.view addSubview:pageControl];
             _pageControl = pageControl;
         }
+        
+        // 跳过按钮
+        UIButton *skipBtn = [[UIButton alloc] init];
+        skipBtn.hidden = YES;
+        skipBtn.backgroundColor = [UIColor lightGrayColor];
+        skipBtn.titleLabel.font = [UIFont systemFontOfSize:16.0f];
+        
+        NSString *skipTitle = @"Skip";
+        NSString *currentLanguage = [[NSLocale preferredLanguages] objectAtIndex:0];
+        if ([currentLanguage isEqualToString:@"zh-Hans-CN"]) {
+            skipTitle = @"跳过";
+        } else if ([currentLanguage isEqualToString:@"zh-Hant-CN"]) {
+            skipTitle = @"跳過";
+        }
+        
+        [skipBtn setTitle:skipTitle forState:UIControlStateNormal];
+        [skipBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [skipBtn addTarget:self action:@selector(skipBtnClicked) forControlEvents:UIControlEventTouchUpInside];
+        skipBtn.frame = CGRectMake(LC_NEW_FEATURE_SCREEN_SIZE.width - 95, 30, 80, 40);
+        skipBtn.layer.cornerRadius = 20.0f;
+        [self.view addSubview:skipBtn];
+        self.skipBtn = skipBtn;
         
     } else {
         
         NSLog(@"警告: 请放入新特性图片!");
     }
+}
+
+- (void)skipBtnClicked {
+    
+    if (self.skipBlock) {
+        self.skipBlock();
+    }
+}
+
+- (void)setShowSkip:(BOOL)showSkip {
+    _showSkip = showSkip;
+    
+    self.skipBtn.hidden = !self.showSkip;
 }
 
 #pragma mark - 新特性视图控制器的显示和消失
@@ -262,13 +299,13 @@
 - (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView {
     
     // 最后一张再向左划的话
-    if (scrollView.contentOffset.x == SCREEN_SIZE.width * (_imageCount - 1)) {
+    if (scrollView.contentOffset.x == LC_NEW_FEATURE_SCREEN_SIZE.width * (_imageCount - 1)) {
         
         if (_finishBlock) {
             
             [UIView animateWithDuration:0.4f animations:^{
                 
-                self.view.transform = CGAffineTransformMakeTranslation(-SCREEN_SIZE.width, 0);
+                self.view.transform = CGAffineTransformMakeTranslation(-LC_NEW_FEATURE_SCREEN_SIZE.width, 0);
                 
             } completion:^(BOOL finished) {
                 

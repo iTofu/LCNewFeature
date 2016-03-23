@@ -2,13 +2,14 @@
 //  Created by 刘超 on 15/4/30.
 //  Copyright (c) 2015年 Leo. All rights reserved.
 //
-//  Email : leoios@sina.com
+//  Mail:   devtip@163.com
 //  GitHub: http://github.com/LeoiOS
-//  如有问题或建议请给我发 Email, 或在该项目的 GitHub 主页 Issues 我, 谢谢:)
+//  如有问题或建议请给我发邮件, 或在该项目的 GitHub 主页 Issues 我, 谢谢:)
 //
-//  V 1.0.3
+//  V 1.1.0
 
-//  !! warning 必读!! 可删除该警告!!
+
+//  !! WARNING 必读!!
 
 /**
  *  !!!!!! 必读 !!!!!!
@@ -48,10 +49,13 @@
  *  4. 如果还有问题或者建议, 请联系我, 我也想做的更好! 联系方式在顶部:)
  */
 
+
+
 #import <UIKit/UIKit.h>
 
+
 // 屏幕尺寸
-#define SCREEN_SIZE [UIScreen mainScreen].bounds.size
+#define LC_NEW_FEATURE_SCREEN_SIZE  [UIScreen mainScreen].bounds.size
 
 /**
  *  完成新特性界面展示后的block回调
@@ -97,6 +101,16 @@ typedef enum : NSUInteger {
  *  状态栏样式, 请先参考`必读`第3条设置
  */
 @property (nonatomic, assign) LCStatusBarStyle statusBarStyle;
+
+/**
+ *  是否显示跳过按钮, 默认不显示
+ */
+@property (nonatomic, assign) BOOL showSkip;
+
+/**
+ *  点击跳过按钮的 block
+ */
+@property (nonatomic, copy) finishBlock skipBlock;
 
 ///**
 // *  设备型号

@@ -41,6 +41,7 @@
     showNewFeature = YES;
     
     if (showNewFeature) {   // 如果需要显示新特性界面
+        __weak typeof(self) weakSelf = self;
         
 #pragma mark 2.1. 方式一: 点击添加的按钮进入主界面
         
@@ -56,13 +57,16 @@
                                                                     imageCount:3
                                                                 showPageControl:YES
                                                                    enterButton:enterBtn];
+        newFeatureVC.showSkip = YES;
+        newFeatureVC.skipBlock = ^(void) {
+            [weakSelf didClickedBtn];
+        };
         _newFeatureVC = newFeatureVC;
         
         
 #pragma mark 2.2. 方式二: 一直左划进入主界面
         
         /*
-        __weak typeof(self) weakSelf = self;
         LCNewFeatureVC *newFeatureVC = [LCNewFeatureVC newFeatureWithImageName:@"new_feature"
                                                                     imageCount:3
                                                                showPageControl:YES
