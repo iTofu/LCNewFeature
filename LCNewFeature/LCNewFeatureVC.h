@@ -3,10 +3,10 @@
 //  Copyright (c) 2015年 Leo. All rights reserved.
 //
 //  Mail:   devtip@163.com
-//  GitHub: http://github.com/LeoiOS
-//  如有问题或建议请给我发邮件, 或在该项目的 GitHub 主页 Issues 我, 谢谢:)
+//  GitHub: http://github.com/iTofu
+//  如有问题或建议请给我发邮件, 或在该项目的 GitHub 主页提 Issue, 谢谢:)
 //
-//  V 1.1.0
+//  V 1.1.1
 
 
 //  !! WARNING 必读!!
@@ -41,7 +41,7 @@
  *
  *
  *  3. 如果想变更状态栏的样式, 打开项目的 Info.plist, 先添加下列键值对, 然后 statusBarStyle 属性才会生效:
- *      
+ *
  *      Key   :  View controller-based status bar appearance
  *      Value :  NO (添加 Key 后，Value 默认值就是 NO)
  *
