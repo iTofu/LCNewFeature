@@ -1,8 +1,8 @@
 # LCNewFeature
 
-[![Travis](https://img.shields.io/travis/iTOfu/LCNewFeature.svg?style=flat)](https://travis-ci.org/iTOfu/LCNewFeature)
+[![Travis](https://img.shields.io/travis/iTofu/LCNewFeature.svg?style=flat)](https://travis-ci.org/iTofu/LCNewFeature)
 [![CocoaPods](https://img.shields.io/cocoapods/v/LCNewFeature.svg)](http://cocoadocs.org/docsets/LCNewFeature)
-[![CocoaPods](https://img.shields.io/cocoapods/l/LCNewFeature.svg)](https://raw.githubusercontent.com/iTOfu/LCNewFeature/master/LICENSE)
+[![CocoaPods](https://img.shields.io/cocoapods/l/LCNewFeature.svg)](https://raw.githubusercontent.com/iTofu/LCNewFeature/master/LICENSE)
 [![CocoaPods](https://img.shields.io/cocoapods/p/LCNewFeature.svg)](http://cocoadocs.org/docsets/LCNewFeature)
 [![LeoDev](https://img.shields.io/badge/blog-LeoDev.me-brightgreen.svg)](http://leodev.me)
 
