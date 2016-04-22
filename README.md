@@ -70,7 +70,7 @@ In me the tiger sniffs the rose.
   }
   ````
 
-* 回调当前页码的 delegate：(``@optional`)
+* 回调当前页码的 delegate：(`@optional`)
 
   ````objc  
   // 当前页码的代理
@@ -80,12 +80,6 @@ In me the tiger sniffs the rose.
 
   #pragma mark - LCNewFeatureVC Delegate
 
-  /**
-   *  代理方法，回调当前页码
-   *
-   *  @param newFeatureVC 控制器
-   *  @param page         当前页码
-   */
   - (void)newFeatureVC:(LCNewFeatureVC *)newFeatureVC page:(NSInteger)page {
       NSLog(@"%@ -> Page: %d", newFeatureVC, (int)page);
   }
