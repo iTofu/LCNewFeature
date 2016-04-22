@@ -12,7 +12,7 @@
 // 屏幕尺寸
 #define SCREEN_SIZE [UIScreen mainScreen].bounds.size
 
-@interface AppDelegate () {
+@interface AppDelegate () <LCNewFeatureVCDelegate> {
     
     /** 新特性界面 (如果是通过 Block 方式进入主界面则不需要声明该属性) */
     LCNewFeatureVC *_newFeatureVC;
@@ -63,7 +63,6 @@
         };
         _newFeatureVC = newFeatureVC;
         
-        
 #pragma mark 2.2. 方式二: 一直左划进入主界面
         
         /*
@@ -77,6 +76,9 @@
         */
         
 #pragma mark 3. 设置新特性界面的属性(可选步骤)
+        
+        // 当前页码的代理
+        newFeatureVC.delegate = self;
         
         // 当前点颜色, 默认[UIColor darkGrayColor]
         newFeatureVC.pointCurrentColor = [UIColor redColor];
@@ -131,6 +133,18 @@
         [UIView setAnimationsEnabled:oldState];
         
     } completion:nil];
+}
+
+#pragma mark - LCNewFeatureVC Delegate
+
+/**
+ *  代理方法，回调当前页码
+ *
+ *  @param newFeatureVC 控制器
+ *  @param page         当前页码
+ */
+- (void)newFeatureVC:(LCNewFeatureVC *)newFeatureVC page:(NSInteger)page {
+    NSLog(@"%@ -> Page: %d", newFeatureVC, (int)page);
 }
 
 @end

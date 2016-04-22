@@ -2,11 +2,11 @@
 //  Created by 刘超 on 15/4/30.
 //  Copyright (c) 2015年 Leo. All rights reserved.
 //
-//  Mail:   devtip@163.com
+//  Mail:   mailto:devtip@163.com
 //  GitHub: http://github.com/iTofu
 //  如有问题或建议请给我发邮件, 或在该项目的 GitHub 主页提 Issue, 谢谢:)
 //
-//  V 1.1.1
+//  V 1.1.2
 
 
 //  !! WARNING 必读!!
@@ -57,10 +57,14 @@
 // 屏幕尺寸
 #define LC_NEW_FEATURE_SCREEN_SIZE  [UIScreen mainScreen].bounds.size
 
+@class LCNewFeatureVC;
+
 /**
  *  完成新特性界面展示后的block回调
  */
-typedef void (^finishBlock)();
+typedef void (^LCNewFeatureFinishBlock)();
+
+//typedef void (^LCNewFeaturePageBlock)(NSInteger page);
 
 /**
  状态栏样式
@@ -80,6 +84,23 @@ typedef enum : NSUInteger {
     DeviceModeliPhone56,    // iPhone 5 / 5s / 6 / 6 p / 6s / 6s p
     DeviceModeliPad,        // iPad
 } DeviceModel;
+
+
+@protocol LCNewFeatureVCDelegate <NSObject>
+
+@optional
+
+/**
+ *  代理方法，回调当前页码
+ *
+ *  @param newFeatureVC 控制器
+ *  @param page         当前页码
+ */
+- (void)newFeatureVC:(LCNewFeatureVC *)newFeatureVC page:(NSInteger)page;
+
+@end
+
+
 
 @interface LCNewFeatureVC : UIViewController
 
@@ -110,7 +131,12 @@ typedef enum : NSUInteger {
 /**
  *  点击跳过按钮的 block
  */
-@property (nonatomic, copy) finishBlock skipBlock;
+@property (nonatomic, copy) LCNewFeatureFinishBlock skipBlock;
+
+/**
+ *  代理
+ */
+@property (nonatomic, weak) id<LCNewFeatureVCDelegate> delegate;
 
 ///**
 // *  设备型号
@@ -178,7 +204,7 @@ typedef enum : NSUInteger {
 + (instancetype)newFeatureWithImageName:(NSString *)imageName
                              imageCount:(NSInteger)imageCount
                         showPageControl:(BOOL)showPageControl
-                            finishBlock:(finishBlock)finishBlock;
+                            finishBlock:(LCNewFeatureFinishBlock)finishBlock;
 
 /**
  *  初始化新特性视图控制器, 实例方法
@@ -196,6 +222,6 @@ typedef enum : NSUInteger {
 - (instancetype)initWithImageName:(NSString *)imageName
                        imageCount:(NSInteger)imageCount
                   showPageControl:(BOOL)showPageControl
-                      finishBlock:(finishBlock)finishBlock;
+                      finishBlock:(LCNewFeatureFinishBlock)finishBlock;
 
 @end

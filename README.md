@@ -8,7 +8,7 @@
 
 几行代码快速集成新特性界面!
 
-![image](https://raw.githubusercontent.com/iTofu/LCNewFeature/master/ScreenShot.png)
+![LCNewFeature](https://raw.githubusercontent.com/iTofu/LCNewFeature/master/ScreenShot.png)
 
 ````
 In me the tiger sniffs the rose.
@@ -22,7 +22,7 @@ In me the tiger sniffs the rose.
 
 ## 前言 Foreword
 
-每次拿到一个项目的时候，头疼的几件事之一就是新特性界面，写一堆代码做一个简单的东西。所以抽空写了个快速集成新特性界面的框架，传了上来。
+每次拿到一个项目的时候，头疼的几件事之一就是新特性界面，写一堆代码做一个简单的东西。所以抽空写了个快速集成新特性界面的框架，传了上来共享之~
 
 
 
@@ -30,7 +30,8 @@ In me the tiger sniffs the rose.
 
 * 下面是示例代码，请多参考Demo！！
 
-* 两个方法：
+* 两种集成方法任选一：
+
   - 方法一：[CocoaPods](https://cocoapods.org/) 导入：`pod 'LCNewFeature'`
   - 方法二：在Demo中找到 `LCNewFeature` 文件夹，拖拽到你的项目中。
 
@@ -69,6 +70,27 @@ In me the tiger sniffs the rose.
   }
   ````
 
+* 回调当前页码的 delegate：(``@optional`)
+
+  ````objc  
+  // 当前页码的代理
+  newFeatureVC.delegate = self;
+
+  // ...
+
+  #pragma mark - LCNewFeatureVC Delegate
+
+  /**
+   *  代理方法，回调当前页码
+   *
+   *  @param newFeatureVC 控制器
+   *  @param page         当前页码
+   */
+  - (void)newFeatureVC:(LCNewFeatureVC *)newFeatureVC page:(NSInteger)page {
+      NSLog(@"%@ -> Page: %d", newFeatureVC, (int)page);
+  }
+  ````
+
 * 有一些神奇的地方，比如赋值只需要传一次图片名是为什么？其实是这样的，你需要按以下规范来给图片命名：（这其实是美工的事:)）
 
   ````
@@ -94,7 +116,11 @@ In me the tiger sniffs the rose.
 
 
 
-## 更新日志 Update Logs
+## 版本 Release
+
+### V 1.1.2 (2016.04.22)
+
+* 添加代理协议，回调当前页码。详见 [Issue 5](https://github.com/iTofu/LCNewFeature/issues/5)。
 
 
 ### V 1.1.1 (2016.04.05)
@@ -165,14 +191,16 @@ In me the tiger sniffs the rose.
 
 * 记住一句话：经理可以顶，职位可以辞，但是服务器的哥们和美工的妹子绝对不能惹！2333
 
-* 多参考Demo，如果还有问题或者建议，请联系我，我也想做的更好！联系方式在下面:)
+* 多参考 Demo，如果还有问题或者建议，请联系我，我也想做的更好！联系方式在下面:)
 
 
 
 ## 联系 Support
 
-* 发现问题请提 Issue，谢谢 :)
+* 发现问题请直接 Issue，谢谢 :)
+
 * Mail: devtip@163.com
+
 * Blog: http://LeoDev.me
 
 

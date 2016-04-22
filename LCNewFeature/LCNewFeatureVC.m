@@ -24,7 +24,7 @@
     UIButton *_enterButton;
 
     /** 完成新特性界面展示后的block回调 */
-    finishBlock _finishBlock;
+    LCNewFeatureFinishBlock _finishBlock;
 }
 
 @property (nonatomic, weak) UIButton *skipBtn;
@@ -96,7 +96,7 @@
 + (instancetype)newFeatureWithImageName:(NSString *)imageName
                              imageCount:(NSInteger)imageCount
                         showPageControl:(BOOL)showPageControl
-                            finishBlock:(finishBlock)finishBlock {
+                            finishBlock:(LCNewFeatureFinishBlock)finishBlock {
 
     return [[self alloc] initWithImageName:imageName
                                 imageCount:imageCount
@@ -125,7 +125,7 @@
 - (instancetype)initWithImageName:(NSString *)imageName
                        imageCount:(NSInteger)imageCount
                   showPageControl:(BOOL)showPageControl
-                      finishBlock:(finishBlock)finishBlock {
+                      finishBlock:(LCNewFeatureFinishBlock)finishBlock {
 
     if (self = [super init]) {
 
@@ -316,6 +316,10 @@
     CGPoint currentPoint = scrollView.contentOffset;
     NSInteger page = currentPoint.x / scrollView.bounds.size.width;
     _pageControl.currentPage = page;
+    
+    if ([self.delegate respondsToSelector:@selector(newFeatureVC:page:)]) {
+        [self.delegate newFeatureVC:self page:page];
+    }
 }
 
 @end
