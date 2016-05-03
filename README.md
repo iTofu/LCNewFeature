@@ -112,6 +112,11 @@ In me the tiger sniffs the rose.
 
 ## 版本 Release
 
+### V 1.1.3 (2016.05.03)
+
+
+* 去除 Log。
+
 ### V 1.1.2 (2016.04.22)
 
 * 添加代理协议，回调当前页码。详见 [Issue 5](https://github.com/iTofu/LCNewFeature/issues/5)。

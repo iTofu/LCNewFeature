@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LCNewFeature"
-  s.version      = "1.1.2"
+  s.version      = "1.1.3"
   s.summary      = "Finish a new feature interface with a few lines of code. Support: http://LeoDev.me"
   s.homepage     = "https://github.com/iTofu/LCNewFeature"
   s.license      = { :type => "MIT", :file => "LICENSE" }

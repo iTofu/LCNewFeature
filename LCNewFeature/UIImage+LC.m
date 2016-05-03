@@ -41,7 +41,7 @@
         realImageName = [NSString stringWithFormat:@"%@_iphone6p", realImageName];
     }
     
-    LCLog(@"\nImageName: %@", realImageName);
+//    LCLog(@"\nImageName: %@", realImageName);
     
     return [self imageNamed:realImageName];
 }
